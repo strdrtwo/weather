@@ -1,0 +1,147 @@
+html,
+body {
+  height: 100%;
+  background-color: rgb(48, 61, 70); 
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+.weather{
+  width: 450px;
+  height: 550px;
+  background-color: #222831;
+  background-size: 30%;
+  color: #ffffff;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.weather-part {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.deeptemp {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin-left: 32px;
+}
+.deeptemp .temp{
+  font-size: 50px;
+  margin: 0px;
+  font-weight: bold;
+}
+.sun{
+  margin-bottom: 50px;
+}
+.today {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 450px;
+  height: 600px;
+  background: linear-gradient(to bottom right, #88EBEF, #535BE6);
+  opacity: 0.9;
+  color: white;
+  border-radius: 30px;
+}
+h1{
+  margin-left: 32px;
+  font-size: 37px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin-bottom: 0px;
+}
+h2{
+  margin-left: 32px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.humidity, .wind, .feels{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 43px 0px 43px;
+  font-family: "Montserrat", sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+.value {
+  font-weight: 400;
+}
+.days {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 40px;
+  margin-top: 70px;
+}
+.name {
+  margin-top: 50px;
+}
+.day {
+  width: 90px;
+  height: 140px;
+  background: #272E37;
+  text-align: center;
+  margin: 1px;
+}
+.one {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #ffffff;
+  color: black;
+}
+.four {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.icon {
+  padding: 10px;
+}
+.btn {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 363px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+  margin: 43px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #81BBE1, #5460E6, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.btn:hover {
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+.btn:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
